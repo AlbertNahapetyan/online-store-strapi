@@ -1,9 +1,7 @@
 const updateController = ({ strapi }) => ({
   async find(ctx) {
     const { data: prevData, meta } = await super.find(ctx);
-    let data = [];
-    prevData.map((el) => data.push({ id: el.id, ...el.attributes }));
-
+    const data = prevData.map((el) => ({ id: el.id, ...el.attributes }));
     return { data, meta };
   },
 

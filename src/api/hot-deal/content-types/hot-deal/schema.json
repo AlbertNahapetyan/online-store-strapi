@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "hot_deals",
+  "info": {
+    "singularName": "hot-deal",
+    "pluralName": "hot-deals",
+    "displayName": "HotDeal"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
+    }
+  }
+}
